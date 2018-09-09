@@ -1,4 +1,6 @@
 #Running the HPC for Social LSTM
+#HPC- High Performance Cluster
+##Files are uploaded using WinSCP
 
 module avail ##lists all modules available
 module load apps/pythonpackages/3.6.0/tensorflow/1.9.0/gpu
