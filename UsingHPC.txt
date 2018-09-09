@@ -1,0 +1,19 @@
+#Running the HPC for Social LSTM
+
+module avail ##lists all modules available
+module load apps/pythonpackages/3.6.0/tensorflow/1.9.0/gpu
+module load apps/pythonpackages/3.6.0/keras/2.2.2/gpu
+python 
+import tensorflow as tf
+print(tf.__version__)
+import keras
+exit()
+nvcc --version #for cuda version
+
+
+#All requirements are satified here
+
+
+cd $HOME/chetan
+cd social_lstm_keras_tf-master
+python train_social_model.py --config /data/configs/eth.json --out_root /out/results
