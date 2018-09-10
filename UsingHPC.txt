@@ -1,14 +1,35 @@
+#### Libraries used in Social LSTM
+numpy*
+pandas*
+os*
+json*
+argparse*
+matplotlib and matplotlib.pyplot
+datetime*
+enum*
+typing*
+functools*
+tensorflow*
+keras*
+shutil*
+
+
+
+
+
 #Running the HPC for Social LSTM
-#HPC- High Performance Cluster
-##Files are uploaded using WinSCP
 
 module avail ##lists all modules available
 module load apps/pythonpackages/3.6.0/tensorflow/1.9.0/gpu
 module load apps/pythonpackages/3.6.0/keras/2.2.2/gpu
+module load pythonpackages/3.6.0/numpy/1.15.0/gnu
+module load pythonpackages/3.6.0/pandas/0.23.4/gnu
 python 
 import tensorflow as tf
 print(tf.__version__)
 import keras
+import numpy
+import pandas
 exit()
 nvcc --version #for cuda version
 
@@ -19,3 +40,4 @@ nvcc --version #for cuda version
 cd $HOME/chetan
 cd social_lstm_keras_tf-master
 python train_social_model.py --config /data/configs/eth.json --out_root /out/results
+
